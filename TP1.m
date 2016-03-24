@@ -27,7 +27,6 @@ for j=1:10
     R=R+0.1
     
 end
-   
 %figure(1)
 %plot(x,T_next)
 %xlabel('x')

@@ -1,4 +1,3 @@
-
 //TP1 transfert thermique ------------ Question IIa)2-------
 clear
 for i=1:100
@@ -10,8 +9,8 @@ dx=0.01
 var=1
 
 
-    cfl=0
-    for l=1:100
+    cfl=0.1
+    for l=1:40
     T(1:100) =  0.5 
     T_next(1:100)=0.
     cfl=cfl+0.01
@@ -29,11 +28,14 @@ var=1
     end
     cfli(l)=cfl
     niter(l)=n
-    disp(n)
+    disp(cfl)
+    clf(1)
+    figure(1)
+    plot2d(x,[T_next],style=[6])
 end
-//disp(cfli,niter)
+
 clf(2)
 figure(2)
-plot2d(cfli,[niter],style=[6])
+plot2d(cfli,[niter],style=[-2,6])
 xlabel('CFL')
 ylabel('nombre d''itérations')

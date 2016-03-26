@@ -1,4 +1,3 @@
-
 //TP1 transfert thermique ------------ Question IIa)2-------
 clear
 lambda=0.9
@@ -12,7 +11,7 @@ end
 
 dt=(dx^2*cfl)/lambda
 
-T(1:100) =  0.5 
+T(1:100) =0.5 
 T_next(1:100)=0.
 
 while var>1e-5
@@ -37,9 +36,11 @@ while var>1e-5
             n=n+1
 end
 
-clf(1)
-figure(1)
-plot2d(x,[T_next,T1,T2,T3],style=[6,12,13,14,15])
-legends(["solution finale";"solution après 10 itérations";"solution après 100 itérations";"solution après 1000 itérations"],[6,12,13,14,15],opt="lr")
+//clf(1)
+//figure(1)
+//plot(x,T_next)
+disp(T_next)
+plot2d(x,[T_next,T1,T2,T3],style=[6,12,13,14])
+legends(["solution finale";"solution après 10 itérations";"solution après 100 itérations";"solution après 1000 itérations"],[6,12,13,14],opt="lr")
 xlabel('x')
 ylabel('Temperature')
